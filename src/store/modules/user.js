@@ -31,6 +31,7 @@ const actions = {
     const { name, pass } = userInfo
     return new Promise((resolve, reject) => {
       login({ name, pass, token: getToken() }).then(res => {
+        console.log(res)
         commit('SET_TOKEN', res.teaInofr.token)
         commit('SET_NAME', res.teaInofr.name)
         commit('SET_AVATAR', res.teaInofr.image)

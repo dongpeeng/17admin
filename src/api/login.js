@@ -3,7 +3,8 @@ import request1 from '@/utils/request1'
 
 export function login(data) {
   return request({
-    url: LOGIN_API+'tealogin',
+    // url: LOGIN_API+'tealogin',
+    url: LOGIN_API+'admin/login',
     method: 'post',
     data
   })

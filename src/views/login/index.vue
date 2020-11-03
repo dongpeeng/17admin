@@ -34,7 +34,7 @@
           name="password"
           tabindex="2"
           auto-complete="on"
-         
+
         />
         <span class="show-pwd" @click="showPwd">
           <svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" />
@@ -109,9 +109,10 @@ export default {
       this.loading = true
       this.$store.dispatch('user/login', this.loginForm).then(() => {
         console.log('success')
-        this.$router.push({ path: this.redirect || '/' })
+        // this.$router.push({ path: this.redirect || '/' })
         this.loading = false
       }).catch(() => {
+        console.log('subLogin catch')
         this.loading = false
       })
     },
