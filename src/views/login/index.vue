@@ -108,11 +108,16 @@ export default {
     subLogin() {
       this.loading = true
       this.$store.dispatch('user/login', this.loginForm).then(() => {
-        console.log('success')
-        // this.$router.push({ path: this.redirect || '/' })
+        // console.log(res)
+        console.log('接口调用成功')
+        // this.$router.push('/')
+       
+        this.$router.push({ path: this.redirect || '/' })
+        // this.$router.push({ path:  '/welcome' })
         this.loading = false
-      }).catch(() => {
+      }).catch((res) => {
         console.log('subLogin catch')
+        console.log(res)
         this.loading = false
       })
     },

@@ -32,12 +32,12 @@ const actions = {
     return new Promise((resolve, reject) => {
       login({ name, pass, token: getToken() }).then(res => {
         console.log(res)
-        commit('SET_TOKEN', res.teaInofr.token)
-        commit('SET_NAME', res.teaInofr.name)
-        commit('SET_AVATAR', res.teaInofr.image)
-        commit('SET_ID', res.teaInofr._id)
-        setToken(res.teaInofr.token)
-        setTokenId(res.teaInofr._id)
+        // commit('SET_TOKEN', res.data.token)
+        commit('SET_NAME', res.data.username)
+        commit('SET_AVATAR', res.data.image)
+        // commit('SET_ID', res.data._id)
+        // setToken(res.data.token)
+        // setTokenId(res.data._id)
         resolve()
       }).catch(error => {
         reject(error)
@@ -102,4 +102,3 @@ export default {
   mutations,
   actions
 }
-

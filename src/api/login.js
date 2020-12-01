@@ -13,7 +13,8 @@ export function login(data) {
 export function getInfo(data) {
   // params = JSON.stringify(params)
   return request1({
-    url: LOGIN_API+'getTeacherInfor',
+    // url: LOGIN_API+'getTeacherInfor',
+    url: LOGIN_API+'admin/infor',
     method: 'post',
     data
   })
